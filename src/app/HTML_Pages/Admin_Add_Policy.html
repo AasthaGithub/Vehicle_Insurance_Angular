@@ -23,17 +23,38 @@
             </div>
 
             <form>
+
                 <div class="form-group">
-                    <label for="inputvt">Vehicle Type</label>
-                    <input type="text" class="form-control" id="inputvt" placeholder="Enter Vehicle Type">
+                    <select class="form-control" required>
+                        <option selected>Select Vehicle Type</option>  
+                       
+                        <option value="1">Honda 4W</option>
+                        <option value="2">Honda 2W</option>
+                      </select>                   
                 </div>
-                <div class="form-group">
-                    <label for="inputpt">Vehicle Plan Type (Third-Party/Comprehensive)</label>
-                    <input type="text" class="form-control" id="inputpt" placeholder="Enter Plan Type">
+
+                <div class="form-group">       
+                    <p class="h4 mb-4"> Select Vehicle Plan Type</p>
+
+                    <div class="d-flex justify-content-around">
+
+                      <div class="form-check">
+                        <input type="radio" class="form-check-input" id="tp" name="same" required>
+                        <label class="form-check-label" >Third-Party</label>
+                      </div>
+
+                      <div class="form-check">
+                        <input type="radio" class="form-check-input" id="com" name="same" >
+                        <label class="form-check-label" >Comprehensive</label>
+                      </div>
+
+                    </div>
                 </div>
+
+
                 <div class="form-group">
                     <label for="inputamt">Amount</label>
-                    <input type="text" class="form-control" id="inputamt" placeholder="Enter Amount">
+                    <input type="number" class="form-control" id="inputamt" placeholder="Enter Amount"  required>
                 </div>
                 
                 <button type="submit" class="btn btn-primary">Submit</button>
