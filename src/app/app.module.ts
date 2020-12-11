@@ -8,9 +8,7 @@ import { RenewPolicyComponent } from './renew-policy/renew-policy.component';
 import { AdminAddPlanComponent } from './admin-add-plan/admin-add-plan.component';
 import { AdminViewClaimsComponent } from './admin-view-claims/admin-view-claims.component';
 import { ClaimPolicyComponent } from './claim-policy/claim-policy.component';
-import { ClaimhistoryComponent } from './claimhistory/claimhistory.component';
 import { ClaimHistoryComponent } from './claim-history/claim-history.component';
-import { ChooseplanComponent } from './chooseplan/chooseplan.component';
 import { ChoosePlanComponent } from './choose-plan/choose-plan.component';
 import { EstimatePremiumComponent } from './estimate-premium/estimate-premium.component';
 
@@ -22,9 +20,7 @@ import { EstimatePremiumComponent } from './estimate-premium/estimate-premium.co
     AdminAddPlanComponent,
     AdminViewClaimsComponent,
     ClaimPolicyComponent,
-    ClaimhistoryComponent,
     ClaimHistoryComponent,
-    ChooseplanComponent,
     ChoosePlanComponent,
     EstimatePremiumComponent
   ],
