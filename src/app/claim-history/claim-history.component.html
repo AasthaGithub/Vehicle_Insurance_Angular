@@ -34,25 +34,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>bsdbf</td>
-                    <td>bd</td>
-                    <td>eg</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>dgg</td>
-                    <td>fgdg</td>
-                    <td>fdgdg</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>fgdd</td>
-                    <td>dfgdfg</td>
-                    <td>fgdg</td>
-                </tr>
-            </tbody>
+                <tr *ngFor="let e of claimList">
+                
+                  <td> {{e.Request_Num}} </td>
+                  <td> {{e.claimDate}} </td>                 
+                  <td> {{e.ApprovStatus}} </td>
+                  <td> {{e.reqAmt}} </td>
+                  
+              </tr>
+          </tbody>
         </table>
 
 

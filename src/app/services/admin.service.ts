@@ -13,14 +13,15 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class AdminService {
 
-  
   private baseUrl = 'http://localhost:8080/api/v1/';
   constructor(private http:HttpClient) { }
 
-  getClaims(){
+  adminViewClaims(){
+    //console.log(this.http.get<any[]>(this.baseUrl + 'claims'));
     return this.http.get<Claims[]>(this.baseUrl + 'claims');
-
   }
+
+  
 }
