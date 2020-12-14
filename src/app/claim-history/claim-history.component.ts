@@ -25,17 +25,19 @@ export class ClaimHistoryComponent implements OnInit {
   loginForm: FormGroup;
   submitted: boolean = false;
   claimList:Observable<any>[] = [];
-  e="eric@hmail.com";
+  usermail:String=localStorage.getItem('currentUser');
+
 
   constructor(private userService: UserService, private router: Router)  //when component is called then that service/waiter (who isholding data) is invoked
   {  }
 
   ngOnInit(): void {
+    this.getClaimsById(this.usermail);
   }
 
   
-  public getClaimsById(e) {
-    this.userService.getClaimsById(e).subscribe(data => {
+  public getClaimsById(usermail) {
+    this.userService.getClaimsById(usermail).subscribe(data => {
       this.claimList = data;
       console.log(this.claimList); 
     });

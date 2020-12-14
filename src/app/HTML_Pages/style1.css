@@ -96,7 +96,7 @@ body{
     height:100%;
 }
 .home-cover {
-    background-image: url("../../assets/home.jpg");
+    background-image: url("../../assets/images/home.jpg");
     height:100%;
 }
 .bg-dark{
@@ -169,7 +169,7 @@ body{
     width: 500px;
     height:500px;
     float:right;
-    background-image: url("../../assets/importance.png");
+    background-image: url("../../assets/images/importance.png");
 }
 
 
