@@ -1,9 +1,11 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import {map} from 'rxjs/operators';
 import { Policy } from 'src/Policy';
 import { User } from 'src/User';
+import { FormsModule } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { Claims } from 'src/app/entities/claims';
+
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -56,5 +58,9 @@ export class UserService {
   //   return this.http.get(this.baseUrl + 'user/' + id);
   //   //}
   // }
+  getClaims(){
+    return this.http.get<Claims[]>(this.baseUrl + 'claims');
+  }
+
 
 }
