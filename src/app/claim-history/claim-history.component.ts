@@ -24,21 +24,23 @@ export class ClaimHistoryComponent implements OnInit {
   
   loginForm: FormGroup;
   submitted: boolean = false;
-  claimList: Claims[];
-  empobj: Observable<any>[] = [];
-  delRec: String;
-  count: any = 0;
+  claimList:Observable<any>[] = [];
+  e="eric@hmail.com";
 
   constructor(private userService: UserService, private router: Router)  //when component is called then that service/waiter (who isholding data) is invoked
   {  }
-  ngOnInit() {
-    this.reloadData();
+
+  ngOnInit(): void {
   }
-  reloadData() {
-    this.userService.getClaims().subscribe(data => {
+
+  
+  public getClaimsById(e) {
+    this.userService.getClaimsById(e).subscribe(data => {
       this.claimList = data;
       console.log(this.claimList); 
     });
   }
 
-}
+  }
+
+

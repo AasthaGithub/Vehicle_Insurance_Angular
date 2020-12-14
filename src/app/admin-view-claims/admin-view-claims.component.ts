@@ -15,23 +15,40 @@ import { Claims } from 'src/app/entities/claims';
 })
 export class AdminViewClaimsComponent implements OnInit {
 
-  loginForm: FormGroup;
+ // loginForm: FormGroup;
   submitted: boolean = false;
-  claimList: Claims[];
-  empobj: Observable<any>[] = [];
-  delRec: String;
-  count: any = 0;
+  claimList: Observable<any>[] = [];
+  
+  clicked = false;
 
+  isClicked = false;
   constructor(private adminService: AdminService, private router: Router)  //when component is called then that service/waiter (who isholding data) is invoked
   {  }
   ngOnInit() {
     this.reloadData();
   }
   reloadData() {
-    this.adminService.adminViewClaims().subscribe(data => {
+    this.adminService.viewClaims().subscribe(data => {
       this.claimList = data;
       console.log(this.claimList); 
     });
   }
 
+  
+  approveClaim(id: number) {
+    this.adminService.approveClaim(id)
+      .subscribe(
+        data => {
+          console.log(data);
+        },
+        error => console.log(error));
+  }
+  
+  declineClaim(id: number) {
+    this.adminService.declineClaim(id).subscribe(
+        data => {
+          console.log(data);
+        },
+        error => console.log(error));
+  }
 }

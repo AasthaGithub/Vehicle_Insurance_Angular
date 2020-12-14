@@ -13,6 +13,8 @@ import { LoginComponent } from './login/login.component';
 import { RenewPolicyComponent } from './renew-policy/renew-policy.component';
 import { SignupComponent } from './signup/signup.component';
 
+
+
 const routes: Routes = [{
   path : 'login',
   component : LoginComponent
@@ -47,7 +49,7 @@ const routes: Routes = [{
   },
   {
     path : 'admin/viewclaim',
-    component : ClaimHistoryComponent
+    component : AdminViewClaimsComponent
   },
   {
     path : 'admin/addplan',

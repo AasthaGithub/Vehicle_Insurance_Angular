@@ -12,6 +12,7 @@ import { ClaimHistoryComponent } from './claim-history/claim-history.component';
 import { ChoosePlanComponent } from './choose-plan/choose-plan.component';
 import { EstimatePremiumComponent } from './estimate-premium/estimate-premium.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { EstimatePremiumComponent } from './estimate-premium/estimate-premium.co
     ClaimPolicyComponent,
     ClaimHistoryComponent,
     ChoosePlanComponent,
-    EstimatePremiumComponent
+    EstimatePremiumComponent,
+    
   ],
   imports: [
     BrowserModule,

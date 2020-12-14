@@ -24,10 +24,13 @@
 
         </div>
 
+        <td>
+            <button  [disabled]="clicked"  class="btn btn-warning" style="margin-left: 20px" (click)="getClaimsById(e)">view</button>
+      </td>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Claim No.</th>
+                    <!-- <th scope="col">Claim No.</th> -->
                     <th scope="col">Date</th>
                     <th scope="col">Approved/Not-Approved</th>
                     <th scope="col">Amount</th>
@@ -35,12 +38,10 @@
             </thead>
             <tbody>
                 <tr *ngFor="let e of claimList">
-                
-                  <td> {{e.Request_Num}} </td>
+                  <!-- <td> {{e.Request_Num}} </td> -->
                   <td> {{e.claimDate}} </td>                 
                   <td> {{e.ApprovStatus}} </td>
-                  <td> {{e.reqAmt}} </td>
-                  
+                  <td> {{e.reqAmt}} </td> 
               </tr>
           </tbody>
         </table>

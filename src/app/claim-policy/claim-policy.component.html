@@ -37,17 +37,18 @@
             </div>
 
             <div class="form-group">
-                <label for="inputvt">Mobile Number *</label><br> +91 <input type="text" class="form-control" id="defaultmn" placeholder="Enter Mobile Number" maxlength="10" pattern="[0-9]{10}" title="10 Digit Mobile Number" required>
+                <label for="inputvt">Mobile Number *</label><br> +91 
+                <input type="text" [(ngModel)]="mobNum" class="form-control" id="defaultmn" placeholder="Enter Mobile Number" maxlength="10" pattern="[0-9]{10}" title="10 Digit Mobile Number" required>
             </div>
 
             <div class="form-group">
                 <label for="inputvt">Policy number *</label>
-                <input type="text" class="form-control" id="defaultpn" placeholder="Enter policy number" required>
+                <input type="text" [(ngModel)]="polNum" class="form-control" id="defaultpn" placeholder="Enter policy number" required>
             </div>
 
             <div class="form-group">
                 <label for="inputvt"> Expence Amount *</label><br>
-                <input type="text" class="form-control" id="defaultmn" placeholder="Enter Amount" maxlength="10" title="Amount in Digits Only" required>
+                <input type="text" [(ngModel)]="expAmt" class="form-control" id="defaultmn" placeholder="Enter Amount" maxlength="10" title="Amount in Digits Only" required>
             </div>
 
             <p class="h4 mb-4"> Select Reason To Claim Insurance</p>

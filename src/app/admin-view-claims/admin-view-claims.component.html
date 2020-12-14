@@ -31,19 +31,23 @@
                     <th scope="col">Status</th>
                     <th scope="col">Requested Amount</th>
                     <th scope="col">Reason</th>
-                    <th scope="col">Click To Approve</th>
+                    <th scope="col">Click To Approve/Decline</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let e of claimList">
+                <tr *ngFor="let e of claimList" [class.myClass]="isClicked">
                 
-                  <td> {{e.Request_Num}} </td>
+                  <td> {{e.request_Num}} </td>
                   <td> {{e.claimDate}} </td>                 
-                  <td> {{e.ApprovStatus}} </td>
+                  <td> {{e.approvStatus}} </td>
                   <td> {{e.reqAmt}} </td>
                   <td> {{e.reason}} </td>
-                  <td><button type="submit" class="btn btn-primary">Approve</button>
-                  <button type="submit" class="btn btn-primary">Decline</button></td>
+                  <td>
+                        <button  [disabled]="clicked"  class="btn btn-warning" style="margin-left: 20px" (click)="approveClaim(e.request_Num)" >Approve</button>
+                  </td>
+                  <td>
+                        <button  [disabled]="clicked"  class="btn btn-warning" style="margin-left: 20px"  (click)="declineClaim(e.request_Num)" (click)="isClicked = !isClicked">Decline</button>
+                  </td>
               </tr>
           </tbody>
         </table>
