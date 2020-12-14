@@ -3,27 +3,32 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminAddPlanComponent } from './admin-add-plan/admin-add-plan.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AdminViewClaimsComponent } from './admin-view-claims/admin-view-claims.component';
+import { BasicHomeComponent } from './basic-home/basic-home.component';
 import { BuyPolicyComponent } from './buy-policy/buy-policy.component';
 import { ChoosePlanComponent } from './choose-plan/choose-plan.component';
 import { ClaimHistoryComponent } from './claim-history/claim-history.component';
 import { ClaimPolicyComponent } from './claim-policy/claim-policy.component';
 import { EstimatePremiumComponent } from './estimate-premium/estimate-premium.component';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
+import { LoginUserComponent } from './login-user/login-user.component';
+import { RegisterUserComponent } from './register-user/register-user.component';
 import { RenewPolicyComponent } from './renew-policy/renew-policy.component';
-import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [{
+  path : '',
+  component : BasicHomeComponent
+},
+{
+  path : 'user-home',
+  component : HomeComponent
+},
+{
   path : 'login',
-  component : LoginComponent
-  },
-  {
-    path : '',
-    component : HomeComponent
+  component : LoginUserComponent
   },
   {
     path : 'register',
-    component : SignupComponent
+    component : RegisterUserComponent
   },
   {
     path : 'buy',
@@ -58,7 +63,7 @@ const routes: Routes = [{
     component : AdminViewClaimsComponent
   },
   {
-    path : 'admin/',
+    path : 'admin-home',
     component : AdminHomeComponent
   },
   {
