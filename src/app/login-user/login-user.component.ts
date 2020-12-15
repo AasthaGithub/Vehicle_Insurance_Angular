@@ -1,9 +1,11 @@
-import { stringify } from '@angular/compiler/src/util';
+// import { stringify } from '@angular/compiler/src/util';
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/User';
 import { UserService } from '../services/user.service';
+
 
 @Component({
   selector: 'app-login-user',
@@ -16,12 +18,13 @@ export class LoginUserComponent implements OnInit {
   }
   loginform :  FormGroup;
   invalidLogin: boolean = false;
-
+date:Date=new Date();
   ngOnInit(): void {
     this.loginform = this.formBuilder.group({										
             useremail: ['', Validators.required],										
             userpswd: ['', Validators.required]										
           });
+      console.log(this.date);
   }
   user = new User();
 
@@ -42,7 +45,7 @@ export class LoginUserComponent implements OnInit {
           alert("Invalid Login!");
           this.router.navigate(['']);
         }else{
-          localStorage.setItem('currentUser',stringify(this.user.userEmail));
+          localStorage.setItem('currentUser',JSON.stringify(this.user.userEmail));
           console.log(localStorage.getItem('currentUser'));
           this.router.navigate(['user-home']);
         }

@@ -1,15 +1,41 @@
+
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <style>
+
+    </style>
+
+
+    <title> Basic Tags </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
 <div class="col-md-4 col-md-offset-4">
 
-    <div class="jumbotron" style="color:rgb(6, 134, 151)">
+    <div  id="example1" style="color:rgb(6, 134, 151)">
         <h1>Premium Estimation</h1>
     </div>
+    <br>
 
     <form>
-        <p>Please select :</p>
+        <div id="example1">
+        <h3>Please select :</h3>
         <input type="radio" id="2 wheeler" name="gender" value="male">
-        <label for="male">2 wheeler</label>
+        <label for="male"> 2 wheeler</label><br>
         <input type="radio" id="4 wheeler" name="gender" value="female">
-        <label for="female">4 wheeler</label><br>
+        <label for="female">4 wheeler</label><br><br>
         <div class="form-group">
             <label for="inputamt">Vehicle Model</label>
             <input type="text" class="form-control" id="model" name="txtState" placeholder="Select Vehicle Model " list="VehicleModelList" />
@@ -27,5 +53,8 @@
             </div>
             <button type="submit" class="btn btn-primary">Calculate Premium</button>
         </div>
+    </div>
     </form>
 </div>
+</body>
+</html>
